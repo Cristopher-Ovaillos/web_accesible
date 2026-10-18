@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Inelco Ingenieria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html">INELCO INGENIERÍA</a>
+        <nav class="menu" aria-label="Navegación principal">
+            <a class="enlace" href="index.html">Inicio</a>
+            <a class="enlace" href="nosotros.html">Nosotros</a>
+            <a class="enlace" href="servicios.html">Servicios</a>
+            <a class="enlace" href="catalogo.html">Catálogo</a>
+            <a class="enlace" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <div class="seccion formulario-seccion">
+            <h1 class="titulo-falso">Contacto Comercial / Portal de Soporte</h1>
+            <p class="sub-texto">Complete sus datos para solicitar cotización o enviar consulta a la IA.</p>
+
+            <!-- arreglo: region para anunciar el resultado del envio a lectores de pantalla -->
+            <div id="estado-formulario" role="status" aria-live="polite" tabindex="-1"></div>
+
+            <!-- problema: no habia <form>, ni <label>, el envio era por onclick en un div -->
+            <form id="formulario-contacto">
+                <div class="campo">
+                    <label for="guest_nombre">Nombre completo</label>
+                    <input type="text" id="guest_nombre" name="guest_nombre">
+                    <span class="error-campo" id="error-guest_nombre"></span>
+                </div>
+                <div class="campo">
+                    <label for="guest_email">Correo electrónico</label>
+                    <input type="email" id="guest_email" name="guest_email">
+                    <span class="error-campo" id="error-guest_email"></span>
+                </div>
+                <div class="campo">
+                    <label for="guest_telefono">Teléfono</label>
+                    <input type="tel" id="guest_telefono" name="guest_telefono">
+                    <span class="error-campo" id="error-guest_telefono"></span>
+                </div>
+                <div class="campo">
+                    <label for="topico">Tópico</label>
+                    <select id="topico" name="topico">
+                        <option value="">Seleccione un tópico</option>
+                        <option value="503">Solicitud Cotización Obra Nueva</option>
+                        <option value="999">Dudas generales</option>
+                    </select>
+                    <span class="error-campo" id="error-topico"></span>
+                </div>
+                <div class="campo">
+                    <label for="descripcion">Consulta</label>
+                    <textarea id="descripcion" name="descripcion" placeholder="Escriba su consulta aquí..."></textarea>
+                    <span class="error-campo" id="error-descripcion"></span>
+                </div>
+
+                <button type="submit" class="boton-falso">Enviar Consulta</button>
+            </form>
+
+            <br>
+            <p class="texto-comun">¿Ya es cliente?</p>
+            <a class="boton-falso" href="http://soporte.inelco.com.ar/login">Ingresar al Portal</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
