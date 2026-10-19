@@ -233,3 +233,35 @@ body {
     font-weight: bold;
     color: #1c1c1c;
 }
+
+.menu-lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-lista li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Página actual: H-04 */
+
+.menu-lista a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Foco visible al navegar con teclado */
+
+.menu-lista a:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+}
