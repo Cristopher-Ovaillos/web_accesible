@@ -8,18 +8,28 @@
 </head>
 <body>
 
+    <a href="#contenido-principal" class="skip-link">
+        Saltar al contenido principal
+    </a>
+
     <header class="encabezado">
         <a class="logo" href="index.html">INELCO INGENIERÍA</a>
         <nav class="menu" aria-label="Navegación principal">
             <a class="enlace" href="index.html">Inicio</a>
             <a class="enlace" href="nosotros.html">Nosotros</a>
-            <a class="enlace" href="servicios.html">Servicios</a>
+            <a class="enlace" href="servicios.html" aria-current="page">Servicios</a>
             <a class="enlace" href="catalogo.html">Catálogo</a>
             <a class="enlace" href="contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main id="contenido-principal">
+        <nav class="migas-pan" aria-label="Ruta de navegación">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li aria-current="page">Servicios</li>
+            </ol>
+        </nav>
         <div class="seccion">
             <h1 class="titulo-falso">Nuestras Soluciones Integrales</h1>
             <p class="item-servicio">Detección de Incendios: Paneles inteligentes y sensores (humo/calor).</p>
