@@ -5,6 +5,7 @@ select:focus-visible, textarea:focus-visible {
     outline-offset: 2px;
 }
 
+
 body {
     font-family: Arial, sans-serif;
     font-size: 12px; 
@@ -49,6 +50,11 @@ body {
 .seccion {
     padding: 30px;
     border-bottom: 1px solid #eee;
+}
+
+.contenedor-promocion{
+ display: flex;
+    justify-content: center;
 }
 
 .titulo-falso {
@@ -101,27 +107,24 @@ body {
     font: inherit;
     text-decoration: none;
     cursor: pointer;
+    
+}
+.boton-falso:hover{
+    background-color: #894bd4;
 }
 
-/* --- ESTILOS DEL POP-UP MOLESTO --- */
-.modal-fondo {
-    display: none; /* Inicialmente oculto */
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Falla: Contraste pobre de fondo */
-    z-index: 1000;
-}
-
-.modal-contenido {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+/* H-02, H-03: modal con <dialog> */
+.modal {
+    width: 300px;
     padding: 40px;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px #ddd;
+    background-color: white;
     text-align: center;
-    width: 300px;
+}
+
+.modal::backdrop {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Falla: La X es apenas visible y muy pequeña, además de ser un div */

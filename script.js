@@ -1,42 +1,22 @@
-// --- Lógica del Pop-Up ---
-let focoAntesDelPopup = null;
 
-window.onload = function() {
-    let popup = document.getElementById('molesto-popup');
-    // Si existe el popup (solo en index), lo abre a los 2 segundos
-    if (popup) {
-        setTimeout(function() {
-            abrirPopup();
-        }, 2000);
-    }
-};
+// H-02 H-03: modal de promocion con <dialog>
+//se abre solo cuando la persona lo pide. showModal() deja el fondo inactivo
+//mantiene el foco dentro, cierra con esc y devuelve el foco al boton de origen
+document.addEventListener('DOMContentLoaded', function () {
+    let modal = document.getElementById('promocion');
+    let abrir = document.getElementById('abrir-promocion');
+    let cerrar = document.getElementById('cerrar-promocion');
+    if (!modal || !abrir) return;
 
-function abrirPopup() {
-    let popup = document.getElementById('molesto-popup');
-    if (!popup) return;
-    focoAntesDelPopup = document.activeElement;
-    popup.style.display = 'block';
-    // Arreglo: mueve el foco al modal (antes se quedaba en la página de atrás)
-    let cerrar = popup.querySelector('.cerrar-modal');
-    if (cerrar) cerrar.focus();
-    document.addEventListener('keydown', manejarTecladoPopup);
-}
+    abrir.addEventListener('click', function () {
+        modal.showModal();
+    });
+    cerrar.addEventListener('click', function () {
+        modal.close();
+    });
+});
 
-function cerrarPopup() {
-    let popup = document.getElementById('molesto-popup');
-    if (popup) {
-        popup.style.display = 'none';
-        document.removeEventListener('keydown', manejarTecladoPopup);
-        // Arreglo: devuelve el foco a donde estaba antes de abrirse
-        if (focoAntesDelPopup) focoAntesDelPopup.focus();
-    }
-}
 
-function manejarTecladoPopup(evento) {
-    if (evento.key === 'Escape') {
-        cerrarPopup();
-    }
-}
 
 //logica form
 //original: solo el borde de "email" se pintaba de rojo si estaba
