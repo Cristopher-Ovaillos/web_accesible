@@ -335,10 +335,28 @@ body {
     margin-bottom: 10px;
 }
 
-/* Adaptación a pantallas pequeñas */
+/* Adaptacion de diferentes Pantallas*/
+/* Tablet y dispositivos intermedios */
+@media (max-width: 1024px) {
+    .contenedor-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+/* Móviles */
 @media (max-width: 700px) {
     .contenedor-servicios {
         grid-template-columns: 1fr;
+    }
+
+    .contenedor-video {
+        max-width: 100%;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 400px) {
+    body {
+        font-size: 1rem;
     }
 }
