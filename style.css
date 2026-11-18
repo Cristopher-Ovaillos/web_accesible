@@ -82,6 +82,12 @@ main p {
     max-width: 80ch;
 }
 
+/* lista de pilares de inicio */
+.lista-pilares {
+    margin: 0 0 10px;
+    padding-left: 1.25rem;
+}
+
 .tarjeta-producto {
     display: inline-block;
     margin-right: 20px;
