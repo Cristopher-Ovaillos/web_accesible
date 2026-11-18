@@ -17,6 +17,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     font-size: 1rem; 
+    line-height: 1.5; /* 1.4.8: interlineado amplio */
     color: #333333; /* Arreglo: contraste (antes #b0b0b0) */
     background-color: #ffffff;
     margin: 0;
@@ -74,6 +75,11 @@ body {
 
 .texto-comun, .item-servicio {
     margin-bottom: 10px;
+}
+
+/* 1.4.8: líneas de hasta 80 caracteres */
+main p {
+    max-width: 80ch;
 }
 
 .tarjeta-producto {
