@@ -32,7 +32,7 @@ let validacionesCampo = {
         return /^[0-9 ()+-]{6,20}$/.test(valor.trim()) ? "" : "Ingresá un teléfono válido.";
     },
     topico: function (valor) {
-        return valor ? "" : "Seleccioná un tópico.";
+        return valor ? "" : "Seleccioná un tema.";
     },
     descripcion: function (valor) {
         return valor.trim().length >= 10 ? "" : "Contanos tu consulta (mínimo 10 caracteres).";
@@ -81,7 +81,7 @@ function enviarConsulta(evento) {
 
     if (!valido) {
         estado.className = 'error';
-        estado.textContent = 'Hay errores en el formulario. Revisá los campos marcados.';
+        estado.textContent = 'Hay errores en el formulario. Revisá los campos con error.';
         primerCampoInvalido.focus();
         return;
     }
